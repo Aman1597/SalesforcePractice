@@ -1,0 +1,75 @@
+<apex:page standardStylesheets="false" showHeader="false" standardController="Review__c">
+  <head> 
+    <style type="text/css">
+    body{ background-color: whitesmoke; }
+    .wrapper{
+        width: 1080px;
+        min-height: 300px;
+        margin: 20px auto;
+        padding: 40px;
+        display: flex;
+        align-items:center;
+        justify-content:left;
+        background-color: white;
+        box-shadow: -4px 4px 8px 0 grey;
+    }
+
+    .a1{
+        //float:left;
+        display:block;
+        background-color: whitesmoke;
+        width: 1080px;
+        padding-left: 50px;
+        padding-right: 50px;
+        box-shadow: 4px -4px 8px 0 grey, -4px 4px 8px 0 grey, 4px 4px 8px 0 grey, -4px -4px 8px 0 grey;
+    }
+    .a3{
+        width:50%;
+        float:left;
+    }
+    .a1 h2{
+        font-family: verdana;
+        //background: grey;
+    }
+    .a1 h3{
+        color: grey;
+        display:inline;
+        margin-bottom: 20px;
+        //text-transform: uppercase;
+        //font-family: verdana;
+    }
+    k{
+        display:block;
+        height:15px;
+    }
+    </style>
+  </head>
+<body>
+<apex:form >
+
+<apex:outputPanel styleClass="wrapper" layout="block">
+    <apex:outputPanel styleClass="a1" layout="block">
+        <k/><h2>REVIEW DETAILS</h2><k/>
+        <apex:outputPanel styleClass="a3" layout="block">
+        <h3>Review No : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.Name}"/><br/><k/>
+        <h3>Job Application : &nbsp;&nbsp;</h3><apex:outputField styleClass="txt" value="{!Review__c.Job_Application__c}"/><br/><k/>
+        <h3>Interviewer : &nbsp;&nbsp;</h3><apex:outputField styleClass="txt" value="{!Review__c.Interviewer__c}"/><br/><k/> 
+        <h3>Currency : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.CurrencyIsoCode}"/><br/><k/>
+        <h3>Interviewer Comment : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.Interviewer_Comment__c}"/><br/><k/><k/><k/>
+        </apex:outputPanel>
+        <apex:outputPanel styleClass="a3" layout="block">
+        <h3>Language proficiency : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.Language_proficiency__c}"/><br/><k/>
+        <h3>Technical skill : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.Technical_skill__c}"/><br/><k/>
+        <h3>Experience : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.Experience__c}"/><br/><k/>
+        <h3>Total Score : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.Total_Score__c}"/><br/><k/>
+        <h3>Percentage : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Review__c.Percentage__c}"/><br/><k/><k/><k/>
+        </apex:outputPanel>
+        
+        <center style="margin-bottom:30px;"><apex:CommandButton action="{!edit}" value="EDIT"/></center>
+    </apex:outputPanel>
+</apex:outputPanel>
+
+</apex:form>
+</body>
+   
+</apex:page>

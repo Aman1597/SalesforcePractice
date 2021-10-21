@@ -1,0 +1,32 @@
+<apex:page standardController="Position__c"  recordSetVar="positions">
+  <apex:sectionHeader title="Position" subtitle="Mass Edit"/>
+  <apex:pageMessages />
+  
+  <apex:form >
+  <apex:pageBlock mode="detail" title="Edit the following records">
+   <apex:pageBlockbuttons >
+   <apex:commandButton action="{!save}" value="Save"/>
+    <apex:commandButton action="{!cancel}" value="Cancel"/>
+  </apex:pageblockButtons>   
+  <apex:pageBlockSection columns="1">
+  <apex:pageBlockTable value="{!positions}" var="position">
+  <apex:column value="{!position.Name}" />
+  <apex:column headerValue="Type">
+  <apex:inputField value="{!position.Type__c}"/>
+  </apex:column>
+  <apex:column headerValue="Department">
+   <apex:inputField value="{!position.Department__c}"/>
+  </apex:column>
+   <apex:column headerValue="Status">
+   <apex:inputField value="{!position.Status__c}"/>
+  </apex:column>
+  
+  
+  </apex:pageBlockTable>
+   
+   
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+  
+</apex:page>

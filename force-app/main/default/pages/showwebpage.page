@@ -1,0 +1,6 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>{!$User.FirstName}</h1>
+  <apex:enhancedList type="Position__c" height="300" rowsPerPage="10" id="AccountList" customizable="False"/>
+  <apex:iframe src="http://www.salesforce.com" scrolling="true" id="theIframe"/>
+</apex:page>

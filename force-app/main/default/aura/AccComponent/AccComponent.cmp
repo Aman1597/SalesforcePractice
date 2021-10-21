@@ -1,0 +1,7 @@
+<aura:component controller="LightningAccountManager" implements="force:appHostable" >
+    <aura:attribute name="accts" type="Account[]" />
+    <lightning:button label="Display Accounts" onclick="{!c.handleClick}" />
+    <aura:iteration items="{!v.accts}" var="acc">
+        <p>{!acc.name} -- {!acc.type}</p>
+    </aura:iteration>
+</aura:component>

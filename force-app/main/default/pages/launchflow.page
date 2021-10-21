@@ -1,0 +1,3 @@
+<apex:page standardController="Candidate__c" >
+  <flow:interview name="Candidate_New_Record" ></flow:interview>
+</apex:page>

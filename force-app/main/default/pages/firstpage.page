@@ -1,0 +1,63 @@
+<apex:page standardController="Position__c">
+  <!-- Begin Default Content REMOVE THIS -->
+  
+   <apex:form >
+       <apex:pageBlock title="Quick Create Position" mode="edit">
+           <apex:pageBlockSection title="Quick Creation" columns="2">
+                <apex:inputField value="{!Position__c.name}" required="true"/>
+                <apex:inputField value="{!Position__c.Type__c}" required="true"/>
+                <apex:inputField value="{!Position__c.Job_Description__c}"/>
+                <apex:inputField value="{!Position__c.Start_Date__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+            </apex:pageBlockButtons>
+       </apex:pageBlock>
+       
+        <apex:pageBlock title="Position Edit" mode="edit">
+        
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                
+                   <apex:commandButton action="{!save}" value="Save & New"/>
+                    <apex:commandButton action="{!save}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            
+            
+            
+            <apex:pageBlockSection title="Information" columns="2">
+                <apex:inputField value="{!Position__c.name}"/>
+                <apex:outputField value="{!Position__c.OwnerId}"/>
+                <apex:inputField value="{!Position__c.Job_Description__c}"/>
+                 <apex:inputField value="{!Position__c.Location__c}"/>
+                <apex:inputField value="{!Position__c.Legacy_Position_Number__c}"/>
+                <apex:inputField value="{!Position__c.Type__c}"/>
+                <apex:inputField value="{!Position__c.Priority__c}"/>
+                <apex:inputField value="{!Position__c.Duration__c}"/>
+                <apex:inputField value="{!Position__c.Education__c}"/>
+                <apex:inputField value="{!Position__c.Responsibilities__c}"/>
+                <apex:inputField value="{!Position__c.CurrencyIsoCode}"/>
+            </apex:pageBlockSection>
+                
+              <apex:pageBlockSection title="Position Dates" columns="1">
+              <apex:inputField value="{!Position__c.Start_Date__c}"/>
+              
+                <apex:inputField value="{!Position__c.Date_Opened__c}"/>
+                  <apex:inputField value="{!Position__c.Date_Closed__c}"/>
+           </apex:pageBlockSection>
+           
+            <apex:pageBlockSection title="Position Information" columns="2">
+              <apex:inputField value="{!Position__c.Department__c}"/>
+              
+                
+                  <apex:inputField value="{!Position__c.Status__c}"/>
+                  <apex:inputField value="{!Position__c.Pay_Grade__c}"/>
+                  <apex:inputField value="{!Position__c.Sub_Status__c}"/>
+           </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+  <!-- End Default Content REMOVE THIS -->
+ 
+  
+</apex:page>

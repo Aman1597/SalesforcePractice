@@ -1,0 +1,77 @@
+<apex:page standardStylesheets="false" showHeader="false" standardController="Job_Application__c">
+  <head> 
+    <style type="text/css">
+    body{ background-color: whitesmoke; }
+    .wrapper{
+        width: 1080px;
+        min-height: 300px;
+        margin: 20px auto;
+        padding: 40px;
+        display: flex;
+        align-items:center;
+        justify-content:left;
+        background-color: white;
+        box-shadow: -4px 4px 8px 0 grey;
+    }
+
+    .a1{
+        //float:left;
+        display:block;
+        background-color: whitesmoke;
+        width: 1080px;
+        padding-left: 40px;
+        padding-right: 30px;
+        box-shadow: 4px -4px 8px 0 grey, -4px 4px 8px 0 grey, 4px 4px 8px 0 grey, -4px -4px 8px 0 grey;
+    }
+    .a3{
+        width:50%;
+        float:left;
+    }
+    .a1 h2{
+        font-family: verdana;
+        //background: grey;
+    }
+    .a1 h3{
+        color: grey;
+        display:inline;
+        margin-bottom: 20px;
+        //text-transform: uppercase;
+        //font-family: verdana;
+    }
+    k{
+        display:block;
+        height:15px;
+    }
+    </style>
+  </head>
+<body>
+<apex:form >
+
+<apex:outputPanel styleClass="wrapper" layout="block">
+    <apex:outputPanel styleClass="a1" layout="block">
+        <k/><h2>JOB APPLICATION DETAILS</h2><k/>
+        <apex:outputPanel styleClass="a3" layout="block">
+        <h3>Job Application No : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Name}"/><br/><k/>
+        <h3>Candidate Name : &nbsp;&nbsp;</h3><apex:outputField styleClass="txt" value="{!Job_Application__c.Candidate_Name__c}"/><br/><k/>
+        <h3>Position Applying for : &nbsp;&nbsp;</h3><apex:outputField styleClass="txt" value="{!Job_Application__c.Position_Applying_for__c}"/><br/><k/>
+        <h3>Position Type : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Position_Type__c}"/><br/><k/>
+        <h3>Status : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Status__c}"/><br/><k/>
+        <h3>Application Status : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Application_Status__c}"/><br/><k/><k/><k/>
+        </apex:outputPanel>
+        <apex:outputPanel styleClass="a3" layout="block">
+        <h3>Total Reviews : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Total_Reviews__c}"/><br/><k/>
+        <h3>Average Score : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Average_Score__c}"/><br/><k/>
+        <h3>Total Experience Score : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Total_Experience_Score__c}"/><br/><k/>
+        <h3>Total Language Proficiency Score : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Total_Language_Proficiency_Score__c}"/><br/><k/>
+        <h3>Total Technical Skills Score : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Job_Application__c.Total_Technical_Skills_Score__c}"/><br/><k/>
+        <h3>Rating Status : &nbsp;&nbsp;</h3><apex:outputField styleClass="txt" value="{!Job_Application__c.Rating_Status__c}"/><br/><k/><k/><k/>
+        </apex:outputPanel>
+        
+        <center style="margin-bottom:30px;"><apex:CommandButton action="{!edit}" value="EDIT"/></center>
+    </apex:outputPanel>
+</apex:outputPanel>
+
+</apex:form>
+</body>
+   
+</apex:page>

@@ -1,0 +1,34 @@
+<template>
+    <lightning-card>
+        <lightning-record-edit-form object-api-name="Contact" onsuccess={handleSuccess}>
+            <lightning-input-field field-name="Name">
+            </lightning-input-field>
+            <lightning-input-field field-name="AccountId">
+            </lightning-input-field>
+            <lightning-input-field field-name="Birthdate">
+            </lightning-input-field>
+            <lightning-input-field field-name="Department">
+            </lightning-input-field>
+            <lightning-input-field field-name="MobilePhone">
+            </lightning-input-field>
+            
+            <lightning-button
+                class="slds-m-top_small"
+                onclick={validateFields}
+                type="submit"
+                label="Create new">
+            </lightning-button>
+        </lightning-record-edit-form>
+    </lightning-card>
+    <lightning-card>
+        <div style="height: 300px;">
+            <lightning-datatable
+                    key-field="id"
+                    data={recs}
+                    columns={columns}>
+            </lightning-datatable>
+        </div> 
+        <!-- <p>{dx}</p> -->
+    </lightning-card>
+    swww
+</template>

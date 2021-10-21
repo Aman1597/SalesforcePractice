@@ -1,0 +1,43 @@
+<apex:page standardController="Position__c" showHeader="true" sidebar="true" >
+ 
+<apex:sectionHeader title="{!$objectType.Position__c.label} Edit" subtitle="New Position"/>
+
+<apex:form >
+<apex:pageBlock title="Position Details" mode="Edit">
+<apex:pageBlockButtons >
+<apex:commandButton action="{!Save}" value="Save"/>
+<apex:commandButton action="{!Cancel}" value="Cancel"/>
+</apex:pageBlockButtons>
+<apex:actionRegion >
+<apex:pageBlockSection title="Information" Columns="2">
+<apex:Inputfield Value="{!Position__c.Name}"/>
+<apex:Inputfield Value="{!Position__c.Type__c}"/>
+<apex:Inputfield Value="{!Position__c.Date_Opened__c}"/>
+<apex:Inputfield Value="{!Position__c.Date_Closed__c}"/>
+
+<apex:Inputfield Value="{!Position__c.Department__c}">
+<apex:actionSupport event="onchange" reRender="TechSkills" />
+
+</apex:inputfield>
+
+</apex:pageBlockSection>
+</apex:actionRegion>
+<apex:outputPanel id="TechSkills" >
+<apex:pageBlockSection title="Technical skills" Columns="2" Rendered="{!Position__c.Department__c=='IT'|| Position__c.Department__c=='Engineering'}">
+
+<apex:inputField value="{!Position__c.Expertise_In__c}"/>
+<apex:inputField value="{!Position__c.Relevant_Experience__c}"/>
+
+</apex:pageBlockSection>
+</apex:outputPanel>
+<apex:pageBlockSection title="Descriptions" Columns="1">
+<apex:inputfield value="{!Position__c.Education__c}"/>
+<apex:inputfield value="{!Position__c.Responsibilities__c}"/>
+
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:form>
+  
+</apex:page>

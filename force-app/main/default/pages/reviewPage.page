@@ -1,0 +1,104 @@
+<apex:page standardController="Review__c">
+  
+  
+   <apex:form >
+   
+     <apex:pageBlock title="Quick Create Review " mode="edit">
+     
+       <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>  
+                   <apex:commandButton action="{!save}" value="Save & New"/>
+                    <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            
+             <apex:pageBlockSection title=" Review Details " columns="2">
+               
+             <apex:inputField value="{!Review__c.name}"/>
+                 <apex:inputField value="{!Review__c.Interviewer__c}"/>
+                <apex:inputField value="{!Review__c.Interviewer_Comment__c}"/>
+                 <apex:inputField value="{!Review__c.Job_Application__c}"/>               
+                <apex:inputField value="{!Review__c.CurrencyIsoCode}"/>
+            
+            </apex:pageBlockSection>
+            
+      <apex:pageBlockSection title="Quick Review " columns="2">
+               
+            
+             <apex:selectRadio value="{!Review__c.Core_concepts__c}">
+             
+            <apex:selectOption itemLabel="1" itemvalue="1"/>
+              <apex:selectOption itemLabel="2" itemvalue="2"/>
+                <apex:selectOption itemLabel="3" itemvalue="3"/>
+                  <apex:selectOption itemLabel="4" itemvalue="4"/>
+                    <apex:selectOption itemLabel="5" itemvalue="5"/>
+            </apex:selectRadio>
+            
+                <apex:selectRadio value="{!Review__c.Tool_knowledge__c}">
+             
+            <apex:selectOption itemLabel="1" itemvalue="1"/>
+              <apex:selectOption itemLabel="2" itemvalue="2"/>
+                <apex:selectOption itemLabel="3" itemvalue="3"/>
+                  <apex:selectOption itemLabel="4" itemvalue="4"/>
+                    <apex:selectOption itemLabel="5" itemvalue="5"/>
+            </apex:selectRadio>
+            
+                <apex:selectRadio value="{!Review__c.Language_proficiency__c}">
+             
+            <apex:selectOption itemLabel="1" itemvalue="1"/>
+              <apex:selectOption itemLabel="2" itemvalue="2"/>
+                <apex:selectOption itemLabel="3" itemvalue="3"/>
+                  <apex:selectOption itemLabel="4" itemvalue="4"/>
+                    <apex:selectOption itemLabel="5" itemvalue="5"/>
+            </apex:selectRadio>
+            
+                <apex:selectRadio value="{!Review__c.Field_experience__c}">
+             
+            <apex:selectOption itemLabel="1" itemvalue="1"/>
+              <apex:selectOption itemLabel="2" itemvalue="2"/>
+                <apex:selectOption itemLabel="3" itemvalue="3"/>
+                  <apex:selectOption itemLabel="4" itemvalue="4"/>
+                    <apex:selectOption itemLabel="5" itemvalue="5"/>
+            </apex:selectRadio>
+            
+                <apex:selectRadio value="{!Review__c.Experience__c}">
+             
+            <apex:selectOption itemLabel="1" itemvalue="1"/>
+              <apex:selectOption itemLabel="2" itemvalue="2"/>
+                <apex:selectOption itemLabel="3" itemvalue="3"/>
+                  <apex:selectOption itemLabel="4" itemvalue="4"/>
+                    <apex:selectOption itemLabel="5" itemvalue="5"/>
+            </apex:selectRadio>
+            
+            
+                  <apex:selectRadio value="{!Review__c.Communication_Skills__c}">
+             
+            <apex:selectOption itemLabel="1" itemvalue="1"/>
+              <apex:selectOption itemLabel="2" itemvalue="2"/>
+                <apex:selectOption itemLabel="3" itemvalue="3"/>
+                  <apex:selectOption itemLabel="4" itemvalue="4"/>
+                    <apex:selectOption itemLabel="5" itemvalue="5"/>
+            </apex:selectRadio> 
+                 
+            <apex:selectRadio value="{!Review__c.Development_Knowledge__c}">
+             
+            <apex:selectOption itemLabel="1" itemvalue="1"/>
+              <apex:selectOption itemLabel="2" itemvalue="2"/>
+                <apex:selectOption itemLabel="3" itemvalue="3"/>
+                  <apex:selectOption itemLabel="4" itemvalue="4"/>
+                    <apex:selectOption itemLabel="5" itemvalue="5"/>
+            </apex:selectRadio>
+            </apex:pageBlockSection>
+            
+    </apex:pageBlock>
+    
+    
+    </apex:form>
+  
+  
+  <h1>Hello {!$User.FirstName} {!$User.LastName}</h1>
+  <Br/>
+ 
+  <!-- End Default Content REMOVE THIS -->
+ 
+  
+</apex:page>

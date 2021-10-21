@@ -1,0 +1,83 @@
+<apex:page standardStylesheets="false" showHeader="false" standardController="Position__c">
+  <head> 
+    <style type="text/css">
+    body{ background-color: whitesmoke; }
+    .wrapper{
+        width: 1080px;
+        min-height: 300px;
+        margin: 20px auto;
+        padding: 40px;
+        display: flex;
+        align-items:center;
+        justify-content:left;
+        background-color: white;
+        box-shadow: -4px 4px 8px 0 grey;
+    }
+
+    .a1{
+        //float:left;
+        display:block;
+        background-color: whitesmoke;
+        width: 1080px;
+        padding-left: 40px;
+        padding-right: 30px;
+        box-shadow: 4px -4px 8px 0 grey, -4px 4px 8px 0 grey, 4px 4px 8px 0 grey, -4px -4px 8px 0 grey;
+    }
+    .a3{
+        width:50%;
+        float:left;
+    }
+    .a1 h2{
+        font-family: verdana;
+        //background: grey;
+    }
+    .a1 h3{
+        color: grey;
+        display:inline;
+        margin-bottom: 20px;
+        //text-transform: uppercase;
+        //font-family: verdana;
+    }
+    k{
+        display:block;
+        height:15px;
+    }
+    </style>
+  </head>
+<body>
+<apex:form >
+
+<apex:outputPanel styleClass="wrapper" layout="block">
+    <apex:outputPanel styleClass="a1" layout="block">
+        <k/><h2>POSITION DETAILS</h2><k/>
+        <apex:outputPanel styleClass="a3" layout="block">
+        <h3>Name : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Name}"/><br/><k/>
+        <h3>Owner : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.OwnerId}"/><br/><k/>
+        <h3>Job Description : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Job_Description__c}"/><br/><k/>
+        <h3>Location : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Location__c}"/><br/><k/>
+        <h3>Legacy Position Number : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Legacy_Position_Number__c}"/><br/><k/>
+        <h3>Date Opened : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Date_Opened__c}"/><br/><k/>
+        <h3>Date Closed : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Date_Closed__c}"/><br/><k/>
+        <h3>Start Date : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Start_Date__c}"/><br/><k/>
+        <h3>Currency : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.CurrencyIsoCode}"/><br/><k/><k/><k/>
+        </apex:outputPanel>
+        <apex:outputPanel styleClass="a3" layout="block">
+        <h3>Type : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Type__c}"/><br/><k/>
+        <h3>Priority : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Priority__c}"/><br/><k/>
+        <h3>Duration : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Duration__c}"/><br/><k/>
+        <h3>Education : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Education__c}"/><br/><k/>
+        <h3>Responsibilities : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Responsibilities__c}"/><br/><k/>
+        <h3>Department : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Department__c}"/><br/><k/>
+        <h3>Pay Grade : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Pay_Grade__c}"/><br/><k/>
+        <h3>Status : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Status__c}"/><br/><k/>
+        <h3>Sub Status : &nbsp;&nbsp;</h3><apex:outputText styleClass="txt" value="{!Position__c.Sub_Status__c}"/><br/><k/><k/><k/>
+        </apex:outputPanel>
+        
+        <center style="margin-bottom:30px;"><apex:CommandButton action="{!edit}" value="EDIT"/></center>
+    </apex:outputPanel>
+</apex:outputPanel>
+
+</apex:form>
+</body>
+   
+</apex:page>

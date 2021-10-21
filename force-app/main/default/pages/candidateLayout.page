@@ -1,0 +1,31 @@
+<apex:page standardController="Candidate__c">
+
+
+   <apex:form >
+     <apex:PageBlock title="Candidate Edit" mode="Edit">
+   
+   <apex:PageBlockButtons >
+   <apex:CommandButton action="{!save}" value="Save"  />
+   <apex:CommandButton action="{!save}" value="Save & New"  />
+   <apex:CommandButton action="{!cancel}" value="Cancel"  />
+   </apex:PageBlockButtons>
+   
+   <apex:PageBlockSection title="Information" columns="2">   
+        <apex:inputField value="{!Candidate__c.Name}" required="true"/>
+        <apex:outputField value="{!Candidate__c.ownerid}"/>
+        <apex:inputField value="{!Candidate__c.Address__c}"/>
+        <apex:inputField value="{!Candidate__c.Blog_Url__c}"/>
+        <apex:inputField value="{!Candidate__c.CurrencyIsoCode}"/>
+          
+   </apex:PageBlockSection> 
+   
+   <apex:pageBlockSection title="Contact Details" columns="2">
+       <apex:inputField value="{!Candidate__c.Phone__c}"/>
+       <apex:inputField value="{!Candidate__c.Candidate_Image__c}"/>
+   </apex:pageBlockSection>
+
+      </apex:PageBlock>
+   
+ 
+   </apex:form>
+</apex:page>
