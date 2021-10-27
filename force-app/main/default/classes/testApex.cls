@@ -1,5 +1,5 @@
 public with sharing class testApex {
     public testApex() {
-        system.debug('fghsafgh');
+        system.debug('fgh');
     }
 }
