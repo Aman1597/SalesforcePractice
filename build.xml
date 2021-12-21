@@ -11,26 +11,17 @@
 					<arg value="diff" />
 					<arg value="--pretty=format:" />
 					<arg value="--name-only" />
-					<arg value="a91df2e1699527ed0d3b797b0cd1c25fe9adbb38" />  
-					<arg value="90b045e711059fe621c55196ecbe054bd096a876" />
+					<arg value="${env.GIT_COMMIT}" />
+					<arg value="${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}" />
 				</exec>
 				<echo>${git.diff}</echo>
 			</sequential>
 	</macrodef>
-<!--${env.GIT_COMMIT}-->
 	<target name="diffBuilderWithGitCommit">
 			<delete dir="deploy-sf"/>
 			<mkdir dir="deploy-sf"/>
-			<echo message="GIT_COMMIT = ${env.SFDX_ACCESS_TOKEN}"/>
-			<echo message="GIT_COMMIT = ${SFDX_ACCESS_TOKEN}"/>
-			<echo>env.SFDX_ACCESS_TOKEN</echo>
-			<echo>"${env.SFDX_ACCESS_TOKEN}"</echo>
-			<echo>{SFDX_ACCESS_TOKEN}</echo>
-			<echo message="GIT_COMMIT = ${env.GIT_COMMIT}"/>
-			<echo message="GIT_COMMIT = ${GIT_COMMIT}"/>
-			<echo>env.GIT_COMMIT</echo>
-			<echo>"${env.GIT_COMMIT}"</echo>
-			<echo>{GIT_PREVIOUS_SUCCESSFUL_COMMIT}</echo>
+			<echo>Current GIT Commit : ${env.GIT_COMMIT}</echo>
+			<echo>Previous Known Successful GIT Commit : ${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}</echo>
 			<gitDiff/>
 			<for list="${git.diff}" param="currentDiff" delimiter="${line.separator}">
 				<sequential>
