@@ -20,6 +20,11 @@
 	<target name="diffBuilderWithGitCommit">
 			<delete dir="deploy-sf"/>
 			<mkdir dir="deploy-sf"/>
+			<echo message="GIT_COMMIT = ${env.SFDX_ACCESS_TOKEN}"/>
+			<echo message="GIT_COMMIT = ${SFDX_ACCESS_TOKEN}"/>
+			<echo>env.SFDX_ACCESS_TOKEN</echo>
+			<echo>"${env.SFDX_ACCESS_TOKEN}"</echo>
+			<echo>{SFDX_ACCESS_TOKEN}</echo>
 			<echo message="GIT_COMMIT = ${env.GIT_COMMIT}"/>
 			<echo message="GIT_COMMIT = ${GIT_COMMIT}"/>
 			<echo>env.GIT_COMMIT</echo>
