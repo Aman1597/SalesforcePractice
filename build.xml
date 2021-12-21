@@ -10,8 +10,8 @@
 					<arg value="diff" />
 					<arg value="--pretty=format:" />
 					<arg value="--name-only" />
-					<arg value="5e0086c93250d0882388543c6511853b2b8ca645" />  
-					<arg value="a40808a114714ca020672cd314b83b6a0d131f7c" />
+					<arg value="%GIT_COMMIT%" />  
+					<arg value="%GIT_PREVIOUS_SUCCESSFUL_COMMIT%" />
 				</exec>
 				<echo>${git.diff}</echo>
 			</sequential>
