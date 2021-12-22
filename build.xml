@@ -19,22 +19,23 @@
 				<echo>${git.diff}</echo>
 			</sequential>
 	</macrodef>
+	<target name="compile">
+		<javac srcdir="." includeantruntime="true" includes="BuildHelper.java" destdir="."></javac>
+	</target>
+
+	<target name="notify" depends="compile">
+		<java fork="true" failonerror="yes" classname="BuildHelper">
+			<arg line="${git.diff}"/>
+		</java>
+	</target>
 	<target name="diffBuilderWithGitCommit">
 			<delete dir="deploy-sf"/>
 			<mkdir dir="deploy-sf"/>
 			<echo>Current GIT Commit : ${env.GIT_COMMIT}</echo>
 			<echo>Previous Known Successful GIT Commit : ${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}</echo>
 			<gitDiff/>
-			<target name="compile">
-				<javac srcdir="." includeantruntime="true" includes="BuildHelper.java" destdir="."></javac>
-			</target>
-
-			<target name="notify" depends="compile">
-				<java fork="true" failonerror="yes" classname="BuildHelper">
-					<arg line="${git.diff}"/>
-				</java>
-			</target>
-			<for list="${git.diff}" param="currentDiff" delimiter="${line.separator}">
+			<antcall target="notify"></antcall>
+			<!-- <for list="${git.diff}" param="currentDiff" delimiter="${line.separator}">
 				<sequential>
 					<if>
 						<and>
@@ -70,6 +71,6 @@
 						</then>
 					</if>
 				</sequential>
-			</for>
+			</for> -->
 	</target>
 </project>
