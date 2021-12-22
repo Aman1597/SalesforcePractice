@@ -28,7 +28,7 @@ public class wordCount {
          res.totalWordCount=str.size();
          res.outptList=m1;
        }
-               result.add(res);
+               result.add(res); //res
       }
      }
       return result;
