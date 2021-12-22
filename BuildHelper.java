@@ -19,7 +19,10 @@ public class BuildHelper {
             System.out.println("The file does not exist.");
             }
         } */
-        System.out.println(args);
+        for (String ag : args) {
+            System.out.println(ag);
+        }
+        
     }
     public static void notifyAdministratorviaEmail(String email) {
         //......
