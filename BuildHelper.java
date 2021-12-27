@@ -8,7 +8,7 @@ public class BuildHelper {
         /* for (String ag : filePathList) {
             System.out.println(ag);
         } */
-        String[] filePathList = args[0].split("\n");
+        String[] filePathList = args[0].split(" \n");
         System.out.println(filePathList[0]);
         System.out.println(filePathList);
         for (String curFilePathStr : filePathList) {
