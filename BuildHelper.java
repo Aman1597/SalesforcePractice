@@ -14,6 +14,7 @@ public class BuildHelper {
         for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
             System.out.println("cfpstr: "+curFilePathStr);
+            System.out.println("charsCount: "+curFilePathStr.length());
             System.out.println("file.toString: "+file.toString()); 
             System.out.println("file.exists(): ");
             System.out.println(file.exists()); 
