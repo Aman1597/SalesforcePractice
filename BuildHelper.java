@@ -16,6 +16,7 @@ public class BuildHelper {
             System.out.println("cfpstr: "+curFilePathStr);
             System.out.println("charsCount: "+curFilePathStr.length());
             System.out.println("startChar: "+curFilePathStr.charAt(0));
+            System.out.println("endChar: "+curFilePathStr.charAt(curFilePathStr.length()-1));
             System.out.println("file.toString: "+file.toString()); 
             System.out.println("file.exists(): ");
             System.out.println(file.exists()); 
