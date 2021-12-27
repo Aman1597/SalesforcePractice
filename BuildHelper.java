@@ -8,7 +8,7 @@ public class BuildHelper {
         /* for (String ag : filePathList) {
             System.out.println(ag);
         } */
-
+        System.out.println(filePathList[0]);
         for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
             System.out.println("cfpstr: "+curFilePathStr);
