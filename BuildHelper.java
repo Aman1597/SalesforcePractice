@@ -4,12 +4,9 @@ import java.nio.file.*;
 public class BuildHelper {
     public static void main(String[] filePathList) {
         
-        /* for (String ag : args) {
+        for (String ag : filePathList) {
             System.out.println(ag);
         }
-        String email = args[0];
-        notifyAdministratorviaEmail(email);
-        System.out.println("Administrator "+email+" has been notified"); */
 
         for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
