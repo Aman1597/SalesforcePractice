@@ -8,11 +8,11 @@ public class BuildHelper {
         /* for (String ag : filePathList) {
             System.out.println(ag);
         } */
-        String[] filePathList = args[0].split(" \n");
+        String[] filePathList = args[0].split("\n");
         System.out.println(filePathList[0]);
         System.out.println(filePathList);
         for (String curFilePathStr : filePathList) {
-            //curFilePathStr = curFilePathStr.trim();
+            curFilePathStr = curFilePathStr.trim();
             File file = new File(curFilePathStr);
             System.out.println("cfpstr: "+curFilePathStr);
             System.out.println("charsCount: "+curFilePathStr.length());
