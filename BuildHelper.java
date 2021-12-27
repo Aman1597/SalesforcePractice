@@ -3,13 +3,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class BuildHelper {
-    public static void main(String[] filePathList) {
+    public static void main(String args) {
         
         /* for (String ag : filePathList) {
             System.out.println(ag);
         } */
+        String[] filePathList = args.split("\n");
         System.out.println(filePathList[0]);
-        for (String curFilePathStr : filePathList) {
+        /* for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
             System.out.println("cfpstr: "+curFilePathStr);
             System.out.println("file.toString: "+file.toString()); 
@@ -74,7 +75,7 @@ public class BuildHelper {
             } else {
                 System.out.println("The file does not exist.");
             }
-        }
+        }*/
     }
     
 }
