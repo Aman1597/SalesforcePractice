@@ -34,3 +34,4 @@ public class wordCount {
       return result;
   }
 }
+//cng

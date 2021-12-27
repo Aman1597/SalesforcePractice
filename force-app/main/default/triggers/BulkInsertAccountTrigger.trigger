@@ -11,4 +11,4 @@ trigger BulkInsertAccountTrigger on Account (after insert) {
     }
     update AccList;
 }
-//bulk
+//cng

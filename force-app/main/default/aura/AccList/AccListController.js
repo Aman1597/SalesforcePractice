@@ -19,7 +19,7 @@
          });
         $A.enqueueAction(fetchAccts);
  },
-    
+    //cng
     updateColumnSorting : function(component, event, helper){
         var fieldName = event.getParam('fieldName');
         var sortDirection = event.getParam('sortDirection');
