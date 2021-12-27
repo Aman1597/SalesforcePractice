@@ -11,10 +11,10 @@
 					<arg value="diff" />
 					<arg value="--pretty=format:" />
 					<arg value="--name-only" />
-					<arg value="f475fc68becc7c641131150595fb3bed2608958a" />
-					<arg value="6db0ca43e37a59b8ccd9a50c642d1f340b145c65" />
-					<!-- <arg value="${env.GIT_COMMIT}" />
-					<arg value="${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}" /> -->
+					<!-- <arg value="f475fc68becc7c641131150595fb3bed2608958a" />
+					<arg value="6db0ca43e37a59b8ccd9a50c642d1f340b145c65" /> -->
+					<arg value="${env.GIT_COMMIT}" />
+					<arg value="${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}" />
 				</exec>
 				<echo>${git.diff}</echo>
 			</sequential>
