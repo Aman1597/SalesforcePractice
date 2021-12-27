@@ -4,9 +4,9 @@ import java.nio.file.*;
 public class BuildHelper {
     public static void main(String[] filePathList) {
         
-        for (String ag : filePathList) {
+        /* for (String ag : filePathList) {
             System.out.println(ag);
-        }
+        } */
 
         for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
@@ -16,6 +16,7 @@ public class BuildHelper {
             System.out.println(file.exists()); 
             System.out.println("2nd cond: ");
             System.out.println(file.getPath().startsWith("force-app"));
+            System.out.println(file.getPath());
             if (file.exists() && file.getPath().startsWith("force-app")) {                
                 String srcDirStr = curFilePathStr.substring(0, curFilePathStr.lastIndexOf('/'));
                 String destDirStr = srcDirStr.replaceFirst("force-app", "deploy-sf");
