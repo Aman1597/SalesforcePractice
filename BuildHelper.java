@@ -3,12 +3,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class BuildHelper {
-    public static void main(String args) {
+    public static void main(String[] args) {
         
         /* for (String ag : filePathList) {
             System.out.println(ag);
         } */
-        String[] filePathList = args.split("\n");
+        String[] filePathList = args[0].split("\n");
         System.out.println(filePathList[0]);
         /* for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
@@ -75,7 +75,6 @@ public class BuildHelper {
             } else {
                 System.out.println("The file does not exist.");
             }
-        }*/
-    }
-    
+        } */
+    }    
 }
