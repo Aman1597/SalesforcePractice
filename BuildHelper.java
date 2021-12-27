@@ -10,11 +10,12 @@ public class BuildHelper {
 
         for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
-            System.out.print(curFilePathStr);
-            System.out.print("file.exists(): ");
-            System.out.print(file.exists()); 
-            System.out.print("2nd cond: ");
-            System.out.print(file.getPath().startsWith("force-app"));
+            System.out.println(curFilePathStr);
+            System.out.println(file.toString()); 
+            System.out.println("file.exists(): ");
+            System.out.println(file.exists()); 
+            System.out.println("2nd cond: ");
+            System.out.println(file.getPath().startsWith("force-app"));
             if (file.exists() && file.getPath().startsWith("force-app")) {                
                 String srcDirStr = curFilePathStr.substring(0, curFilePathStr.lastIndexOf('/'));
                 String destDirStr = srcDirStr.replaceFirst("force-app", "deploy-sf");
