@@ -10,7 +10,7 @@ public class BuildHelper {
         } */
         String[] filePathList = args[0].split("\n");
         System.out.println(filePathList[0]);
-        /* for (String curFilePathStr : filePathList) {
+        for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
             System.out.println("cfpstr: "+curFilePathStr);
             System.out.println("file.toString: "+file.toString()); 
@@ -75,6 +75,6 @@ public class BuildHelper {
             } else {
                 System.out.println("The file does not exist.");
             }
-        } */
+        }
     }    
 }
