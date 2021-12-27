@@ -10,6 +10,7 @@ public class BuildHelper {
         } */
         String[] filePathList = args[0].split("\n");
         System.out.println(filePathList[0]);
+        System.out.println(filePathList);
         for (String curFilePathStr : filePathList) {
             File file = new File(curFilePathStr);
             System.out.println("cfpstr: "+curFilePathStr);
