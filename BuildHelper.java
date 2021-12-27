@@ -1,5 +1,6 @@
 import java.io.File;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class BuildHelper {
     public static void main(String[] filePathList) {
