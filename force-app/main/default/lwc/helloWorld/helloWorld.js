@@ -14,6 +14,6 @@ export default class HelloWorld extends LightningElement {
   changeHandler(event) {
     this.greeting = event.target.value;
     ///console.log(TEST);
-    console.log("cng2");
+    console.log("cng5");
   }
 }

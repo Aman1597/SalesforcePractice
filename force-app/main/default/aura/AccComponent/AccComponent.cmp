@@ -3,6 +3,6 @@
     <lightning:button label="Display Accounts" onclick="{!c.handleClick}" />
     <aura:iteration items="{!v.accts}" var="acc">
         <p>{!acc.name} -- {!acc.type}</p>
-        <p>cng2</p>
+        <p>cng5</p>
     </aura:iteration>
 </aura:component>
