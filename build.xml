@@ -11,8 +11,6 @@
 					<arg value="diff" />
 					<arg value="--pretty=format:" />
 					<arg value="--name-only" />
-					<!-- <arg value="f475fc68becc7c641131150595fb3bed2608958a" />
-					<arg value="6db0ca43e37a59b8ccd9a50c642d1f340b145c65" /> -->
 					<arg value="${env.GIT_COMMIT}" />
 					<arg value="${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}" />
 				</exec>
@@ -35,42 +33,5 @@
 			<echo>Previous Known Successful GIT Commit : ${env.GIT_PREVIOUS_SUCCESSFUL_COMMIT}</echo>
 			<gitDiff/>
 			<antcall target="buildHelper"></antcall>
-			<!-- <for list="${git.diff}" param="currentDiff" delimiter="${line.separator}">
-				<sequential>
-					<if>
-						<and>
-							<available file="@{currentDiff}"/>
-							<matches string="@{currentDiff}" pattern="force-app/"/>
-						</and>
-						<then>
-							<propertyregex
-								property="currentDiffWithoutSRC"
-								input="@{currentDiff}"
-								regexp="force-app\/([a-zA-Z$]*\/[a-zA-Z0-9\/\.\_-]*)"
-								select="\1"
-								casesensitive="true" 
-								override="true"
-								defaultValue=""/>
-							<echo>Current Component : ${currentDiffWithoutSRC}</echo>
-							<copy todir="deploy-sf" verbose="false">
-								<fileset dir="force-app">
-									<include name="${currentDiffWithoutSRC}" />
-								</fileset>
-							</copy>
-							<if>
-								<available file="@{currentDiff}-meta.xml"/>
-								<then>
-									<echo>Generating meta-xml : @{currentDiff}</echo>
-									<copy todir="deploy-sf" verbose="false">
-										<fileset dir="force-app">
-											<include name="${currentDiffWithoutSRC}-meta.xml" />
-										</fileset>
-									</copy>
-								</then>
-							</if>
-						</then>
-					</if>
-				</sequential>
-			</for> -->
 	</target>
 </project>
